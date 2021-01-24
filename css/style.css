@@ -2,13 +2,16 @@
   --text-color: #757575;
   --title-color: #212121;
   --accent-color: #2196f3;
+  --background-color: #ffffff;
+  --background-color-additional: #2f303a;
+  --border-color-section: #ececec;
+  --border-color-element: #eeeeee;
+  --background-color-section: #f5f4fa;
 }
 
 body {
   font-family: "Roboto";
   font-size: 14px;
-  width: 1600px;
-  background-color: #ffffff;
 }
 
 /*сбросы*/
@@ -35,6 +38,7 @@ img {
 
 .link {
   text-decoration: none;
+  display: block;
 }
 
 .list {
@@ -52,8 +56,9 @@ img {
 
 /*стилизация хедера*/
 .header {
-  padding-top: 27px;
-  padding-bottom: 27px;
+  /*padding-top: 27px;
+  padding-bottom: 27px;*/
+  border: 1px solid var(--border-color-section);
 }
 .header .container {
   display: flex;
@@ -75,7 +80,10 @@ img {
   align-items: center;
 }
 /* стилизация логотипа */
-
+.navigation .logo-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 .logo {
   font-family: Raleway;
   font-style: normal;
@@ -85,14 +93,14 @@ img {
   letter-spacing: 0.03em;
 }
 .blue-part {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .black-part {
-  color: #212121;
+  color: var(--title-color);
   margin-right: 90px;
 }
 .white-part {
-  color: #ffffff;
+  color: var(--background-color);
 }
 
 /* стилизация навигации */
@@ -104,8 +112,10 @@ img {
 .navigation-list-link {
   font-style: normal;
   font-weight: 500;
-  line-height: 1.143;
+  line-height: 1.172;
   letter-spacing: 0.02em;
+  padding-top: 31px;
+  padding-bottom: 31px;
 
   color: #212121;
 }
@@ -124,9 +134,12 @@ img {
   margin-left: auto;
 }
 .contact-list-link {
+  padding-top: 31px;
+  padding-bottom: 31px;
+
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.143;
+  line-height: 1.172;
   letter-spacing: 0.02em;
 
   color: var(--text-color);
@@ -191,7 +204,11 @@ img {
 
 .features-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+}
+.features-list-item {
+  max-width: 270px;
 }
 
 .features-list-item:not(:last-child) {
@@ -226,6 +243,7 @@ img {
 .we-do-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: -15px;
 }
 
@@ -250,6 +268,7 @@ img {
 .team-block {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: var(--background-color-section);
 }
 
 .team-title {
@@ -267,17 +286,15 @@ img {
 .team-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: -15px;
 }
 
 .team-list-item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.187;
+  width: 270px;
 
-  letter-spacing: 0.03em;
-
-  color: var(--text-color);
+  background-color: var(--background-color);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-item {
@@ -285,33 +302,39 @@ img {
 }
 
 .team-list-content .team-list-person {
-  font-size: 16px font-weight 500;
-  line-height: 1.187;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.172;
   text-align: center;
+  letter-spacing: 00.03em;
   color: var(--title-color);
 
   margin-bottom: 10px;
 }
 .team-list-content .team-list-position {
-  font-size: 16px font-weight 400;
-  line-height: 1.187;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
   text-align: center;
+
+  color: var(--text-color);
 }
 .team-list-content {
   padding-top: 30px;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 58px;
+  padding-right: 58px;
   padding-bottom: 30px;
 }
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--background-color-additional);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.address {
-  margin-top: 20px;
+.footer .logo-link {
+  margin-bottom: 20px;
 }
 
 .address-list-item:not(:last-child) {
@@ -328,7 +351,10 @@ img {
 
   color: rgba(255, 255, 255, 0.6);
 }
-
+.address {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .physical-address {
   color: #ffffff;
 }
@@ -379,11 +405,15 @@ img {
 .project-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: -15px;
 }
 
 .project-list-item {
+  max-width: 370px;
   margin: 15px;
+
+  border: 1px solid #eeeeee;
 }
 
 .project-list-link {
@@ -396,6 +426,8 @@ img {
   line-height: 2;
   letter-spacing: 0.03em;
   color: var(--title-color);
+
+  margin-bottom: 4px;
 }
 .project-list-content .project-list-type {
   font-size: 16px;
